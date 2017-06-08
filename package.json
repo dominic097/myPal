@@ -5,11 +5,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "clean": "rm -rf dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "precache": "ng build --aot && sw-precache --verbose --config=./src/sw-precache-config.js"
+    "precache": "sw-precache --verbose --config=./src/sw-precache-config.js",
+    "build": "ng build",
+    "build_prod": "ng build --aot=false --prod && npm run minify && npm run precache",
+    "minify": "uglifyjs dist/**.js --each -o /dist/  --screw-ie8 --compress --mangle -x .js"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +34,7 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
+    "browserify": "^13.0.1",
     "@angular/cli": "1.0.0",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",

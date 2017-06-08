@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SideNavMenuComponent {
-  private user = {
+  private  user = {
     fName: 'Dominic',
     email: 'dominic097@gmail.com',
     profilPic:'',

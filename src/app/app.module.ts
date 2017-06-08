@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SharedModule} from './modules/shared-module/shared-module';
-import {MdSidenavModule, MdToolbarModule} from '@angular/material';
+// import {MdSidenavModule, MdToolbarModule} from '@angular/material';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -15,8 +15,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    MdSidenavModule,
-    MdToolbarModule,
+    // MdSidenavModule,
+    // MdToolbarModule,
     SharedModule,
     BrowserAnimationsModule,
     BrowserModule,
