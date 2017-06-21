@@ -21,10 +21,13 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "./vendor/css/material.blue_grey-red.min.css"
+        "./vendor/css/material.blue_grey-red.min.css",
+        "./vendor/css/bootstrap.min.css"
       ],
       "scripts": [
-        "./vendor/js/material.min.js"
+        "./vendor/js/jQuery.min.js",
+        "./vendor/js/material.min.js",
+        "./vendor/js/bootstrap.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

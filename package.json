@@ -10,9 +10,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "precache": "sw-precache --verbose --config=./src/sw-precache-config.js",
-    "build": "ng build",
-    "build_prod": "ng build --aot=false --prod && npm run minify && npm run precache",
-    "minify": "uglifyjs dist/**.js --each -o /dist/  --screw-ie8 --compress --mangle -x .js"
+    "build": "ng build --watch",
+    "build_prod": "ng build  --aot=false --prod && npm run minify && npm run precache",
+    "minify": "uglifyjs  'dist/**.js' --each -o './dist/'  --screw-ie8 --compress --mangle -x .js"
   },
   "private": true,
   "dependencies": {
