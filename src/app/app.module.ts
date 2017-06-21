@@ -1,13 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SharedModule} from './modules/shared-module/shared-module';
-// import {MdSidenavModule, MdToolbarModule} from '@angular/material';
-import 'hammerjs';
+import {SharedModule, LoginModule, HomeModule} from './modules/index';
 
-import { AppComponent } from './app.component';
+import {MdCardModule} from '@angular/material';
+
+import 'hammerjs';
+import {AuthService} from './services/auth/auth.service';
+import {CanActivateViaAuthGuard} from './services/auth/auth.gaurd';
+import {AppComponent} from './app.component';
+import {AppRoutingModule} from "./app.route.module";
+
 
 
 @NgModule({
@@ -15,15 +20,19 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    // MdSidenavModule,
-    // MdToolbarModule,
+    MdCardModule,
     SharedModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+
+    AppRoutingModule,
+    LoginModule,
+    HomeModule
   ],
-  providers: [],
+  providers: [AuthService, CanActivateViaAuthGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,9 +1,54 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888;
+  line-height: 30px;
+  text-align: center;
+}
+
+md-sidenav-container, .my-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.app-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.app-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.drawer-nav{
+  position: absolute;
+  width: 200px;
+  height: 100%;
+}
+.app-sideNav{
+  padding: 1%;
+}
+
+.navMenuIcon{
+  padding: 0 3%;
+}
+
 /**
  * Created by Dominic on 6/6/2017.
  */
 
 .demo-layout-transparent {
-  background: url("../../../assets/bgImage/app-bg-white-pattern.jpg") center / cover;
+  background: url("../assets/bgImage/app-bg-white-pattern.jpg") center / cover;
 }
 
 .demo-layout-transparent .mdl-layout__header,
@@ -11,6 +56,12 @@
   /* This background is dark, so we set text to white. Use 87% black instead if
      your background is light. */
   color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .mdl-layout__header {
+    display: block;
+  }
 }
 
 .drawer-header {
@@ -51,7 +102,7 @@
   padding: 1% 6%;
 }
 
-span.userShtDesc{
+span.userShtDesc {
   font-size: 0.7em;
   font-style: italic;
 }
@@ -60,6 +111,9 @@ span.userShtDesc{
   z-index: -2;
 }
 
-.app-side-navigation .mdl-navigation__link  span {
+.app-side-navigation .mdl-navigation__link span {
   margin-left: 8%;
 }
+
+
+
